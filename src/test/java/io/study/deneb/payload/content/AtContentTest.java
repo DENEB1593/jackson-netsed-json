@@ -24,13 +24,14 @@ class AtContentTest {
 
     String result = om.writeValueAsString(button);
 
-    SoftAssertions assertions = new SoftAssertions();
-    assertions.assertThat(result).isNotNull();
-    assertions.assertThat(result.contains("scheme_android")).isTrue();
-    assertions.assertThat(result.contains("scheme_ios")).isTrue();
-    assertions.assertThat(result.contains("url_pc")).isFalse();
-    assertions.assertThat(result.contains("url_mobile")).isFalse();
-    assertions.assertAll();
+    SoftAssertions.assertSoftly(softly ->{
+      softly.assertThat(result).isNotNull();
+      softly.assertThat(result.contains("scheme_android")).isTrue();
+      softly.assertThat(result.contains("scheme_ios")).isTrue();
+      softly.assertThat(result.contains("url_pc")).isFalse();
+      softly.assertThat(result.contains("url_mobile")).isFalse();
+      softly.assertAll();
+    });
   }
 
   @Test
@@ -46,13 +47,13 @@ class AtContentTest {
 
     String result = om.writeValueAsString(content);
 
-
-    SoftAssertions assertions = new SoftAssertions();
-    assertions.assertThat(result).isNotNull();
-    assertions.assertThat(result.contains("senderkey")).isTrue();
-    assertions.assertThat(result.contains("templatecode")).isTrue();
-    assertions.assertThat(result.contains("message")).isTrue();
-    assertions.assertAll();
+    SoftAssertions.assertSoftly(softly -> {
+      softly.assertThat(result).isNotNull();
+      softly.assertThat(result.contains("senderkey")).isTrue();
+      softly.assertThat(result.contains("templatecode")).isTrue();
+      softly.assertThat(result.contains("message")).isTrue();
+      softly.assertAll();
+    });
   }
 
   private static AtContent.Button givenAtButton() {
