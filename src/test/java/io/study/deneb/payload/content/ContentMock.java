@@ -1,7 +1,7 @@
 package io.study.deneb.payload.content;
 
-import io.study.deneb.payload.content.imple.AtContent;
-import io.study.deneb.payload.content.imple.LmsContent;
+import io.study.deneb.payload.content.impl.AtContent;
+import io.study.deneb.payload.content.impl.LmsContent;
 
 import java.util.List;
 

@@ -1,10 +1,9 @@
-package io.study.deneb.payload.content.imple;
+package io.study.deneb.payload.content.impl;
 
 import com.fasterxml.jackson.annotation.*;
 import io.study.deneb.payload.content.Content;
 import lombok.Builder;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 import java.util.List;
 

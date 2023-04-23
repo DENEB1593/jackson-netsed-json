@@ -1,4 +1,4 @@
-package io.study.deneb.payload.content.imple;
+package io.study.deneb.payload.content.impl;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.study.deneb.payload.content.Content;
