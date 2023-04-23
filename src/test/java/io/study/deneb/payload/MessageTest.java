@@ -24,8 +24,6 @@ class MessageTest {
 
     String result = om.writeValueAsString(message);
 
-    System.out.println(result);
-
     assertSoftly(bundle -> {
       bundle.assertThat(result).isNotNull();
       bundle.assertThat(result.contains("senderkey")).isTrue();

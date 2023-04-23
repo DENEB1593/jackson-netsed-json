@@ -1,6 +1,7 @@
-package io.study.deneb.payload.content;
+package io.study.deneb.payload.content.imple;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import io.study.deneb.payload.content.Content;
 import lombok.Builder;
 
 @Builder

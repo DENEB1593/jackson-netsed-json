@@ -2,6 +2,8 @@ package io.study.deneb.payload.content;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import io.study.deneb.payload.content.imple.AtContent;
+import io.study.deneb.payload.content.imple.LmsContent;
 
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.WRAPPER_OBJECT)

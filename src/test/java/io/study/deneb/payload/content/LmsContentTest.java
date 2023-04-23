@@ -2,7 +2,7 @@ package io.study.deneb.payload.content;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.study.deneb.payload.config.TestConfig;
-import org.assertj.core.api.SoftAssertions;
+import io.study.deneb.payload.content.imple.LmsContent;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
