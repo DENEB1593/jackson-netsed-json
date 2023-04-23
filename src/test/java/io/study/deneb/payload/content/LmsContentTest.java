@@ -6,6 +6,8 @@ import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.SoftAssertions.assertSoftly;
+
 class LmsContentTest {
 
   private ObjectMapper om;
@@ -17,21 +19,15 @@ class LmsContentTest {
 
   @Test
   void serializeLmsContent() throws Exception {
-    LmsContent content = givenLmsContent();
+    LmsContent content = ContentMock.LMS_CONTENT;
 
     String result = om.writeValueAsString(content);
 
-    SoftAssertions.assertSoftly(softly -> {
-      softly.assertThat(result.contains("LMS subject")).isTrue();
-      softly.assertThat(result.contains("LMS message")).isTrue();
+    assertSoftly(bundle -> {
+      bundle.assertThat(result.contains("LMS subject")).isTrue();
+      bundle.assertThat(result.contains("LMS message")).isTrue();
     });
   }
 
-  private static LmsContent givenLmsContent() {
-    return LmsContent.builder()
-        .subject("LMS subject")
-        .message("LMS message")
-        .build();
-  }
 
 }

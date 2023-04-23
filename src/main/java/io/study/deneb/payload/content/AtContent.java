@@ -1,7 +1,6 @@
 package io.study.deneb.payload.content;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.*;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
